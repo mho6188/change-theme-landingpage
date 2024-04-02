@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel around the World</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+      }
+
+      h1 {
+        color: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: #40879a;
+      }
+
+      .container {
+        max-width: 600px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+
+      button {
+        display: block;
+        margin: 30px auto;
+        border: 1px solid #2e2b29;
+        background: #65b1b4;
+        font-size: 18px;
+        border-radius: 8px;
+        padding: 10px 15px;
+        transition: all 150mm ease-in-out;
+      }
+
+      button:hover {
+        background: #fbd4a9;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+        color: #ffffff;
+      }
+
+      .footer {
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      .themeButton {
+        font-size: 14px;
+        background: #000000;
+        color: #ffffff;
+        padding: 5 8px;
+        margin-top: 25px;
+        border-radius: 40px;
+        box-shadow: 4px 1px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .themeButton:hover {
+        background: #ffffff;
+        color: #000000;
+      }
+
+      .intro-link-picture {
+        transition: all 125mm ease-in-out;
+        border-radius: 10px;
+      }
+
+      .intro-link-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.2);
+      }
+      .grid {
+        margin: 20px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 15px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 20px;
+        transition: all 125mm ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(2);
+      }
+
+      .dark {
+        background: linear-gradient(
+          109.6deg,
+          rgb(6, 2, 2) 32.4%,
+          rgb(137, 30, 47) 98.8%
+        );
+        color: #ffffff;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .dark button {
+        background: #8f2635;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="themeButton">Change Theme</button>
+    <div class="container">
+      <h1>Travel around the World</h1>
+      <h2>My favourite Hobby</h2>
+      <a href="https://en.wikipedia.org/wiki/Travel" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/073/original/mohamed-nohassi-Di-DmLD6cW8-unsplash.jpg?1711716483"
+          alt=""
+          class="intro-link-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/120/801/original/Manhatten_4.jpg?1711484503"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/036/original/grant-cai-Ia5RC0Epm4c-unsplash.jpg?1711704781"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/035/original/erik-karits-EGDOEKWITe0-unsplash.jpg?1711704773"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/071/original/ole-kloth-G7KbMeOwTOk-unsplash.jpg?1711716469"
+          alt=""
+        />
+      </div>
+      <p>
+        Travel is the movement of people between distant geographical locations.
+        Travel can be done by foot, bicycle, automobile, train, boat, bus,
+        airplane, ship or other means, with or without luggage, and can be one
+        way or round trip. Travel can also include relatively short stays
+        between successive movements, as in the case of tourism.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Travel" target="_blank">
+        <strong> 🌴 More Infos on Wikipedia </strong>
+      </a>
+      <button>Lovely Countries</button>
+    </div>
+    <footer>
+      Coded by
+      <a
+        class="footer"
+        href="https://www.shecodes.io/graduates/123701-melanie-hoffmann"
+        target="_blank"
+        >🩶 Melanie Hoffmann 🩶
+      </a>
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        body.classList.toggle("dark");
+
+        /*
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+        */
+      }
+
+      let themeButton = document.querySelector(".themeButton");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
